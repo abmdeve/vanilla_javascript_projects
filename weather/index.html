@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App - Easy Tutorials</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <!-- BEGIN HEADER INPUT AND SEARCH BUTTON -->
+      <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <button><img src="images/search.png" alt="search" /></button>
+      </div>
+      <!-- END HEADER INPUT AND SEARCH BUTTON -->
+      <!-- ERROR TEXT IF NAME IS UNDEFINED -->
+      <div class="error">
+        <p>Invalid city name</p>
+      </div>
+      <!-- BEGIN WEATHER AND CITY -->
+      <div class="weather">
+        <img src="images/rain.png" alt="rain" class="weather-icon" />
+        <h1 class="temp">22°c</h1>
+        <h2 class="city">New York</h2>
+        <!-- DETAILS -->
+        <div class="details">
+          <div class="col">
+            <img src="images/humidity.png" alt="humidity" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <!-- WIND -->
+          <div class="col">
+            <img src="images/wind.png" alt="humidity" />
+            <div>
+              <p class="wind">15 km</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END WEATHER AND CITY -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

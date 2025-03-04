@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add To Cart - Furniture</title>
+    <!-- FONT AWESOME CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK STYLE CSS FILE -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- CONTAINER -->
+    <div class="container">
+      <!-- NAV BAR -->
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand">Vintage </a>
+        <!-- NAV BUTTON TOGGLER -->
+        <button type="button" class="navbar-toggler">
+          <i class="fas fa-bars"></i>
+        </button>
+        <!-- NAV COLLAPSE -->
+        <div class="navbar-collapse">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <!-- CART DIV -->
+        <div class="cart">
+          <button type="button" id="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count-info">0</span>
+          </button>
+          <!-- CART CONTAINER -->
+          <div class="cart-container">
+            <div class="cart-list">
+              <!-- SINGLE ITEM -->
+              <div class="cart-item">
+                <img src="images/armchair.png" alt="product image" />
+                <!-- CART ITEM INFO -->
+                <div class="cart-item-info">
+                  <h3 class="cart-item-name">Arm Chair</h3>
+                  <span class="cart-item-category">Chair</span>
+                  <span class="cart-item-price">120.00$</span>
+                </div>
+                <!-- CART ITEM DELETE BUTTON -->
+
+                <button type="button" class="cart-item-del-btn">
+                  <i class="fas fa-times">X</i>
+                </button>
+              </div>
+              <!-- END OF SINGLE ITEM -->
+            </div>
+
+            <!-- CART TOTAL -->
+            <div class="cart-total">
+              <h3>Total: $</h3>
+              <span id="cart-total-value">$120.00</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- END OF NAV BAR  -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
