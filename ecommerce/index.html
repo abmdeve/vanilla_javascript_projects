@@ -60,11 +60,14 @@
               <a href="contact.html" class="nav__link">Contact</a>
             </li>
           </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
         </div>
 
         <!-- NAV BUTTON'S -->
         <div class="nav__btns">
-          <div class="login__toggle" id="login-toggle">
+          <div class="login__toggle" id="login-button">
             <i class="bx bx-user"></i>
           </div>
           <div class="nav__shop" id="cart-shop">
@@ -79,8 +82,7 @@
 
     <!--=============== CART ===============-->
     <div class="cart" id="cart">
-      <!-- <div class="cart show-cart" id="cart"> -->
-      <i class="bx bx-x xart__close"></i>
+      <i class="bx bx-x cart__close" id="cart-close"></i>
 
       <h2 class="cart__title-center">My Cart</h2>
       <!-- CART CONTAINER -->
@@ -88,7 +90,11 @@
         <!-- FIST ARTICLE -->
         <article class="cart__card">
           <div class="cart__box">
-            <img src="assets/img/cart-1.png" alt="cart__img" />
+            <img
+              src="assets/img/cart-1.png"
+              alt="cart__img"
+              class="cart__img"
+            />
           </div>
 
           <div class="cart__details">
@@ -112,16 +118,19 @@
             </div>
           </div>
         </article>
-
         <!-- SECOND ARTICLE -->
         <article class="cart__card">
           <div class="cart__box">
-            <img src="assets/img/cart-2.png" alt="cart__img" />
+            <img
+              src="assets/img/cart-2.png"
+              alt="cart__img"
+              class="cart__img"
+            />
           </div>
 
           <div class="cart__details">
-            <h3 class="cart__title">Cardigan Hoodie</h3>
-            <span class="cart__price">$16</span>
+            <h3 class="cart__title">Windbreaker</h3>
+            <span class="cart__price">$12</span>
 
             <!-- CART AMOUNT -->
             <div class="cart__amount">
@@ -140,16 +149,19 @@
             </div>
           </div>
         </article>
-
         <!-- THIRD ARTICLE -->
         <article class="cart__card">
           <div class="cart__box">
-            <img src="assets/img/cart-3.png" alt="cart__img" />
+            <img
+              src="assets/img/cart-3.png"
+              alt="cart__img"
+              class="cart__img"
+            />
           </div>
 
           <div class="cart__details">
-            <h3 class="cart__title">Cartoon</h3>
-            <span class="cart__price">$10</span>
+            <h3 class="cart__title">Windbreaker</h3>
+            <span class="cart__price">$12</span>
 
             <!-- CART AMOUNT -->
             <div class="cart__amount">
@@ -505,9 +517,68 @@
     </main>
 
     <!--=============== FOOTER ===============-->
-    <footer class="footer section"></footer>
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <!-- FOOTER CONTENT ! -->
+        <div class="footer__content">
+          <a href="#" class="footer__logo">
+            <i class="bx bx-shopping-bags footer__logo-icon"></i>e-shopper
+          </a>
+
+          <p class="footer__description">
+            Enjoy the biggest sale <br />of your life.
+          </p>
+
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="#" class="footer__social-link">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+            <a href="#" class="footer__social-link">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <!-- FOOTER CONTENT 2 ! -->
+        <div class="footer__content">
+          <h3 class="footer__title">About</h3>
+
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Custom Support</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+        <!-- FOOTER CONTENT 3 ! -->
+        <div class="footer__content">
+          <h3 class="footer__title">Our Services</h3>
+
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Shop</a></li>
+            <li><a href="#" class="footer__link">Discount</a></li>
+            <li><a href="#" class="footer__link">Shipping mode</a></li>
+          </ul>
+        </div>
+        <!-- FOOTER CONTENT 4 ! -->
+        <div class="footer__content">
+          <h3 class="footer__title">Our Company</h3>
+
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Register</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <span class="footer__copy">&#169; @bm_dev. All rights reserved</span>
+    </footer>
 
     <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt crollup__icon"></i>
+    </a>
 
     <!--=============== STYLE SWITCHER ===============-->
 
