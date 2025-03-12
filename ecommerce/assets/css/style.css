@@ -726,7 +726,7 @@ input {
   font-size: 2rem;
   color: var(--title-color);
   position: absolute;
-  top: 1rem;
+  top: 1.25rem;
   right: 0.9rem;
   cursor: pointer;
 }
@@ -749,8 +749,9 @@ input {
 .login__input {
   width: 100%;
   background: var(--container-color);
+  color: var(--text-color);
   font-size: var(--normal-font-size);
-  padding: 0.25rem 0.5rem 0;
+  padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
 .signup {
@@ -777,8 +778,7 @@ input {
   box-shadow: -2px 0 4px var(--shadow);
   height: 100%;
   top: 0;
-  /* right: -100%; */
-  right: 0;
+  right: -100%;
   padding: 3.5rem 2rem;
   transition: 0.4s;
 }
