@@ -50,7 +50,7 @@ const login = document.getElementById("login"),
 /* Validate if constant exists */
 if (loginButton) {
   loginButton.addEventListener("click", () => {
-    login.classList.remove("show-login");
+    login.classList.add("show-login");
   });
 }
 
