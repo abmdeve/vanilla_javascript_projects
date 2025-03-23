@@ -699,6 +699,38 @@ input {
 /*=============== ABOUT PAGE ===============*/
 
 /*=============== BLOG PAGE ===============*/
+.blog__container {
+  row-gap: 1.8rem;
+}
+.blog__post {
+  grid-template-columns: 0.8fr 1.2fr;
+  column-gap: 2rem;
+  align-items: center;
+  background-color: var(--container-color);
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+}
+.blog__img {
+  border-radius: 0.8rem;
+}
+.blog__details {
+  font-size: var(--small-font-size);
+  text-align: justify;
+  margin-bottom: var(--mb-1);
+}
+.blog__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-5);
+}
+.blog__date {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  margin-bottom: var(--mb-0-75);
+}
+.read__more {
+  text-align: right;
+}
 
 /*=============== CART PAGE ===============*/
 
@@ -1115,6 +1147,13 @@ input {
   .shop__title {
     font-size: var(--normal-font-size);
   }
+  /* SECOND PART SHOP, BLOG, FAQ'S, CONTACT, ABOUT AND DETAILS PAGE INTEGRATION */
+  .blog__post {
+    column-gap: 1.6rem;
+  }
+  .blog__title {
+    font-size: var(--normal-font-size);
+  }
 }
 
 /* For medium devices */
@@ -1200,6 +1239,9 @@ input {
   .pagination {
     justify-content: center;
   }
+  .blog__post {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1235,6 +1277,10 @@ input {
   .pagination {
     column-gap: 0.4rem;
   }
+  .blog__post {
+    grid-template-columns: 1fr;
+    row-gap: 0.8rem;
+  }
 }
 
 /* For small devices */
@@ -1260,10 +1306,15 @@ input {
   .steps__card {
     padding: 1.5rem;
   }
+  /* SECOND PART SHOP, BLOG, FAQ'S, CONTACT, ABOUT AND DETAILS PAGE INTEGRATION */
+
   .shop__container {
     grid-template-columns: 1fr;
   }
   .pagination span {
     font-size: var(--small-font-size);
+  }
+  .blog__post {
+    padding: 0.8rem;
   }
 }
