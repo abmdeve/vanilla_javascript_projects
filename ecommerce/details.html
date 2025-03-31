@@ -16,7 +16,7 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/colors/color-1.css" />
+    <link rel="stylesheet" class="js-color-style" href="assets/css/colors/color-1.css" />
 
     <title>Responsive e-commerce website - Crypticalcoder</title>
   </head>
@@ -42,7 +42,7 @@
             <!-- CART -->
 
             <li class="nav_item">
-              <a href="cart.html" class="nav__link">Cart</a>
+              <a href="about.html" class="nav__link">About</a>
             </li>
             <!-- BLOG -->
 
@@ -461,13 +461,126 @@
     </footer>
 
     <!--=============== LIGHTBOX ===============-->
+    <div class="lightbox open">
+      <div class="lightbox__content">
+        <div class="lightbox__close">&times;</div>
+        <img
+          src="assets/img/details-2.png"
+          alt="product"
+          class="lightbox__img"
+        />
+
+        <div class="lightbox__caption">
+          <div class="caption__text">e-shopper</div>
+          <!-- <div class="caption__counter">1 of 4</div> -->
+          <div class="caption__counter"></div>
+        </div>
+      </div>
+
+      <div class="lightbox__controls">
+        <div class="prev__item" onclick="prevItem()">
+          <i class="bx bx-chevron-left"></i>
+        </div>
+        <div class="next__item" onclick="nextItem()">
+          <i class="bx bx-chevron-right"></i>
+        </div>
+      </div>
+    </div>
 
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
       <i class="bx bx-up-arrow-alt crollup__icon"></i>
     </a>
     <!--=============== STYLE SWITCHER ===============-->
+    <div class="style__switcher">
+      <div class="style__switcher-toggler s__icon">
+        <i class="bx bx-cog bx-spin"></i>
+      </div>
 
+      <h4>Theme Colors</h4>
+
+      <div class="theme__colors js-theme-colors">
+        <button
+          type="button"
+          data-js-theme-color="color-1"
+          class="js-theme-color-item theme__button  color-1"
+        ><i class="bx bx-check"></i></button></button>
+        <button
+          type="button"
+          data-js-theme-color="color-2"
+          class="js-theme-color-item theme__button color-2"
+        ><i class="bx bx-check"></i></button></button> 
+        <button
+          type="button"
+          data-js-theme-color="color-3"
+          class="js-theme-color-item theme__button color-3"
+        ><i class="bx bx-check"></i></button>
+        <button
+          type="button"
+          data-js-theme-color="color-4"
+          class="js-theme-color-item theme__button color-4"
+        ><i class="bx bx-check"></i></button></button>
+        <button
+          type="button"
+          data-js-theme-color="color-5"
+          class="js-theme-color-item theme__button color-5"
+        ><i class="bx bx-check"></i></button></button>
+      </div>
+    </div>
+    <!--=============== LIGHTBOXR ===============-->
+
+    <script>
+      const productItems = document.querySelectorAll(".details__img"),
+        totalProductItems = productItems.length,
+        lightbox = document.querySelector(".lightbox"),
+        lightboxImg = lightbox.querySelector(".lightbox__img"),
+        lightboxClose = lightbox.querySelector(".lightbox__close"),
+        lightboxCounter = lightbox.querySelector(".caption__counter");
+      let itemIndex = 0;
+      for (let i = 0; i < totalProductItems.length; i++) {
+        productItems[i].addEventListener("click", function () {
+          itemIndex = i;
+          changeItem();
+          toggleLightbox();
+        });
+      }
+
+      function nextItem() {
+        if (itemIndex == totalProductItems - 1) {
+          itemIndex = 0;
+        } else {
+          itemIndex++;
+        }
+        changeItem();
+      }
+      function prevItem() {
+        if (itemIndex == 0) {
+          itemIndex = totalProductItems - 1;
+        } else {
+          itemIndex--;
+        }
+        changeItem();
+      }
+
+      function toggleLightbox() {
+        lightbox.classList.toggle("open");
+      }
+      function changeItem() {
+        imgSrc = productItems[itemIndex]
+          .querySelector(".details__img img")
+          .getAttribute("src");
+        lightboxImg.src = imgSrc;
+        lightboxCounter.innerHTML = itemIndex + 1 + " of " + totalProductItems;
+      }
+
+      console.log("totalProductItems", totalProductItems);
+      // CLOSE LIGHTBOX
+      lightbox.addEventListener("click", function () {
+        if (event.target === lightboxClose || event.target === lightbox) {
+          toggleLightbox();
+        }
+      });
+    </script>
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
 

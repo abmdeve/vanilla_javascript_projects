@@ -1262,16 +1262,190 @@ input {
 }
 
 /*=============== LIGHTBOX ===============*/
+.lightbox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: var(--z-fixed);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1.8rem;
+}
+.lightbox__img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 450px;
+  cursor: pointer;
+  background-color: var(--container-color);
+  display: block;
+  padding: 0.6rem;
+}
+.lightbox__content {
+  position: relative;
+}
+.lightbox__close {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: -2.6rem;
+  right: 0;
+  font-size: 2rem;
+  color: #fff;
+  text-align: right;
+  line-height: 40px;
+}
+.lightbox__caption {
+  position: absolute;
+  left: 0;
+  bottom: -2.2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--normal-font-size);
+  color: #fff;
+  font-weight: var(--font-medium);
+  z-index: -1;
+}
+.lightbox__controls .prev__item,
+.lightbox__controls .next__item {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: var(--body-color);
+  color: var(--title-color);
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  top: 50%;
+  margin-top: -20px;
+  z-index: 110;
+  transition: all 0.3s ease;
+}
+.lightbox__controls .prev__item:hover,
+.lightbox__controls .next__item:hover {
+  transform: scale(1.1);
+}
+.lightbox__controls .prev__item:active,
+.lightbox__controls .next__item:active {
+  transform: scale(1);
+}
+
+.lightbox__controls .prev__item {
+  left: 1.8rem;
+}
+.lightbox__controls .next__item {
+  right: 1.8rem;
+}
+.lightbox__controls .prev__item .bx,
+.lightbox__controls .next__item .bx {
+  font-size: 2rem;
+  line-height: 40px;
+}
 
 /* lightbox open */
-
+.lightbox.open {
+  display: flex;
+}
 /* lightbox open animation */
+.lightbox.open .lightbox__content {
+  animation: lighboxImage 0.5s ease;
+}
+@keyframes lighboxImage {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 /*=============== STYLE SWITCHER ===============*/
+.style__switcher {
+  position: fixed;
+  right: 0;
+  top: 26%;
+  width: 200px;
+  z-index: var(--z-tooltip);
+  background-color: var(--container-color);
+  padding: 1rem;
+  box-shadow: -0.5px 0.5px 4px var(--shadow);
+  border-radius: 0.2rem;
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+.style__switcher .s__icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  background-color: var(--container-color);
+  right: 100%;
+  margin-right: 1.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 45px;
+  top: 0;
+}
+.style__switcher h4 {
+  margin-bottom: var(--mb-1);
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-bold);
+  text-transform: capitalize;
+}
+.style__switcher .theme__colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.style__switcher .theme__colors button {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.style__switcher .theme__colors button i {
+  color: #fff;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.style__switcher .color-1 {
+  background-color: hsl(0, 88%, 61%);
+}
+.style__switcher .color-2 {
+  background-color: hsl(260, 88%, 61%);
+}
+.style__switcher .color-3 {
+  background-color: hsl(336, 88%, 61%);
+}
+.style__switcher .color-4 {
+  background-color: hsl(284, 88%, 61%);
+}
+.style__switcher .color-5 {
+  background-color: hsl(375, 88%, 61%);
+}
 
 /* Style switcher open */
-
+.style__switcher.open {
+  transform: translateX(-10px);
+}
 /* Active theme color */
+.style__switcher .theme__colors button.active i {
+  display: block;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
